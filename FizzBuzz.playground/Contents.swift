@@ -1,16 +1,12 @@
-for i in 1 ... 100 {
-    
-    let out3 = i % 3
-    let out5 = i % 5
-    
-    if out3 == 0 && out5 == 0{
+for i in 1...100 {
+    switch (i % 3 == 0, i % 5 == 0) {
+    case (true, true):
         print("FizzBuzz")
-    } else if out3 == 0{
+    case (true, false):
         print("Fizz")
-    } else if out5 == 0{
+    case (false, true):
         print("Buzz")
-    } else {
+    default:
         print(i)
     }
-
 }
